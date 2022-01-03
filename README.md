@@ -1,10 +1,10 @@
 ## Introduction
-school work
+#### school work
 Three states : user->check->datainfo 
 
 ## Add me to start your journey !
 
-![Qr code](https://imgur.com/k0RK8S2)
+![Qr code](https://imgur.com/k0RK8S2.jpg)
 
 Line id : @273mguqp
 
