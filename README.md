@@ -1,69 +1,12 @@
-# A linebot that tracks your money
-
-> If you want to be rich, you need to be accountable for your money first.
-
 ## Introduction
-
-It's an user friendly linebot based on finite state machine.
-
-Its goal is to help you to track your money easily.
-
-Hence, it got lots of buttons to stop you from tiredly typing your transaction information.
+school work
+Three states : user->check->datainfo 
 
 ## Add me to start your journey !
 
-![Qr code](https://i.imgur.com/RqIcm05.jpg)
+![Qr code](https://imgur.com/k0RK8S2)
 
-Line id : @275yfsdf
-
-## Main menu
-Click `查詢` to ckeck your transaction history, or click `記帳` to record a new transaction.
-
-<img src="https://i.imgur.com/pwigqwM.jpg" width="300">
-
-## 記帳
-When you click `記帳`, it'll show you a menu for you to choose which kind of transaction you want to record (expense or income).
-
-<img src="https://i.imgur.com/suwbYLF.jpg" width="300">
-
-Next, you can choose a specific type of your transaction, `食、衣、住、行、育、樂` in expense, `薪資、獎金、投資、零用錢` in income.
-
-<img src="https://i.imgur.com/NOu0TXD.jpg" width="300">
-
-Then type in the transaction value and some description.
-
-<img src="https://i.imgur.com/lmgfNGe.jpg" width="300">
-
-## 查詢
-When you click `查詢`, it'll show you a menu to pick which kind of history you want to look.
-
-There are three types of history you can look up, which are single day, this week, and this month.
-
-If you choose single day, it'll show you a menu for you to pick which day's information you want to look up.
-
-<img src="https://i.imgur.com/ZbyhP9J.jpg" width="300">
-<img src="https://i.imgur.com/cqq7la2.jpg" width="300">
-
-If you choose to see week or month information, there are 4 kinds of information you can choose.
-
-<img src="https://i.imgur.com/J2iOb7H.jpg" width="300">
-<img src="https://i.imgur.com/1yMMyNG.jpg" width="300">
-
-* `收入結構` -> It'll show you a pie chart of income structure.
-
-<img src="https://i.imgur.com/26mLsVh.jpg" width="300">
-
-* `支出結構` -> It'll show you a pie chart of expense structure.
-
-<img src="https://i.imgur.com/ggjHM7U.jpg" width="300">
-
-* `收支比例` -> It'll show you a pie chart of ratio of expense and income.
-
-<img src="https://i.imgur.com/Tb131Vc.jpg" width="300">
-
-* `各項金額` -> It'll show you a bar chart of every kind of transaction.
-
-<img src="https://i.imgur.com/X2jpkID.jpg" width="300">
+Line id : @273mguqp
 
 ## FSM graph
 ![fsm graph](./fsm.png)
