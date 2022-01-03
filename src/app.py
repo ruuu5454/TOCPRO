@@ -9,30 +9,29 @@ from linebot.exceptions import InvalidSignatureError, LineBotApiError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 from fsm import TocMachine
-# from utils import send_text_message, send_main_menu, send_image_message
 from utils import send_text_message
 
 load_dotenv()
 
+
 machine = TocMachine(
-    states=[
-        "user",
-        "check",
-        "dateInfo",
-        # "monthExpense",
-        # "monthIncome",
-        # "monthRatio",
-        # "monthAll",
-        # "weekExpense",
-        # "weekIncome",
-        # "weekRatio",
-        # "weekAll",
-        # "record",
-        # "action",
-        # "type",
-        # "value",
-        # "description"
-    ],
+    states=["user",
+            "check",
+            "dateInfo",
+            "monthExpense",
+            "monthIncome",
+            "monthRatio",
+            "monthAll",
+            "weekExpense",
+            "weekIncome",
+            "weekRatio",
+            "weekAll",
+            "record",
+            "action",
+            "type",
+            "value",
+            "description"
+            ],
     transitions=[
         {
             "trigger": "advance",
@@ -46,100 +45,98 @@ machine = TocMachine(
             "dest": "dateInfo",
             "conditions": "is_going_to_dateInfo",
         },
-        # {
-        #     "trigger": "advance",
-        #     "source": "check",
-        #     "dest": "monthExpense",
-        #     "conditions": "is_going_to_monthExpense",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "check",
-        #     "dest": "weekExpense",
-        #     "conditions": "is_going_to_weekExpense",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "check",
-        #     "dest": "monthIncome",
-        #     "conditions": "is_going_to_monthIncome",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "check",
-        #     "dest": "weekIncome",
-        #     "conditions": "is_going_to_weekIncome",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "check",
-        #     "dest": "monthRatio",
-        #     "conditions": "is_going_to_monthRatio",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "check",
-        #     "dest": "weekRatio",
-        #     "conditions": "is_going_to_weekRatio",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "check",
-        #     "dest": "monthAll",
-        #     "conditions": "is_going_to_monthAll",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "check",
-        #     "dest": "weekAll",
-        #     "conditions": "is_going_to_weekAll",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "user",
-        #     "dest": "record",
-        #     "conditions": "is_going_to_record",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "record",
-        #     "dest": "action",
-        #     "conditions": "is_going_to_action",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "action",
-        #     "dest": "type",
-        #     "conditions": "is_going_to_type",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "type",
-        #     "dest": "value",
-        #     "conditions": "is_going_to_value",
-        # },
-        # {
-        #     "trigger": "advance",
-        #     "source": "value",
-        #     "dest": "description",
-        #     "conditions": "is_going_to_description",
-        # },
         {
-            "trigger": "go_back",
-            "source": [
-                "dateInfo",
-                # "monthExpense",
-                # "monthIncome",
-                # "monthRatio",
-                # "monthAll",
-                # "weekExpense",
-                # "weekIncome",
-                # "weekRatio",
-                # "weekAll",
-                # "description"
-            ],
-            "dest": "user"
+            "trigger": "advance",
+            "source": "check",
+            "dest": "monthExpense",
+            "conditions": "is_going_to_monthExpense",
         },
+        {
+            "trigger": "advance",
+            "source": "check",
+            "dest": "weekExpense",
+            "conditions": "is_going_to_weekExpense",
+        },
+        {
+            "trigger": "advance",
+            "source": "check",
+            "dest": "monthIncome",
+            "conditions": "is_going_to_monthIncome",
+        },
+        {
+            "trigger": "advance",
+            "source": "check",
+            "dest": "weekIncome",
+            "conditions": "is_going_to_weekIncome",
+        },
+        {
+            "trigger": "advance",
+            "source": "check",
+            "dest": "monthRatio",
+            "conditions": "is_going_to_monthRatio",
+        },
+        {
+            "trigger": "advance",
+            "source": "check",
+            "dest": "weekRatio",
+            "conditions": "is_going_to_weekRatio",
+        },
+        {
+            "trigger": "advance",
+            "source": "check",
+            "dest": "monthAll",
+            "conditions": "is_going_to_monthAll",
+        },
+        {
+            "trigger": "advance",
+            "source": "check",
+            "dest": "weekAll",
+            "conditions": "is_going_to_weekAll",
+        },
+        {
+            "trigger": "advance",
+            "source": "user",
+            "dest": "record",
+            "conditions": "is_going_to_record",
+        },
+        {
+            "trigger": "advance",
+            "source": "record",
+            "dest": "action",
+            "conditions": "is_going_to_action",
+        },
+        {
+            "trigger": "advance",
+            "source": "action",
+            "dest": "type",
+            "conditions": "is_going_to_type",
+        },
+        {
+            "trigger": "advance",
+            "source": "type",
+            "dest": "value",
+            "conditions": "is_going_to_value",
+        },
+        {
+            "trigger": "advance",
+            "source": "value",
+            "dest": "description",
+            "conditions": "is_going_to_description",
+        },
+        {"trigger": "go_back",
+         "source": ["dateInfo",
+                    "monthExpense",
+                    "monthIncome",
+                    "monthRatio",
+                    "monthAll",
+                    "weekExpense",
+                    "weekIncome",
+                    "weekRatio",
+                    "weekAll",
+                    "description"
+                    ],
+         "dest": "user"
+         },
     ],
     initial="user",
     auto_transitions=False,
@@ -177,14 +174,8 @@ def webhook_handler():
         # check if message is valid or not
         if response == False:
             if machine.state == 'user':
-                # send_main_menu(reply_token)
-                send_text_message(reply_token, "FUCK")
-            # elif machine.state == 'record':
-            #     send_text_message(reply_token, "請輸入支出或收入")
-            # elif machine.state == 'action':
-            #     send_text_message(reply_token, "請輸入種類\n食、衣、住、行、育、樂")
-            # elif machine.state == 'type':
-            #     send_text_message(reply_token, "請輸入金額")
+                send_text_message(reply_token, "So tired")
+
     return "OK"
 
 
