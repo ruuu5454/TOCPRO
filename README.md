@@ -1,9 +1,9 @@
 ## Introduction
 #### school work
-Unable to do the function, only states
 
+Unable to do the function, only states.
 
-Leave the name of the state as messege can change state.
+Leave the name of the state as message can change state.
 
 
 <img src="https://imgur.com/TbgGhxT.jpg"
