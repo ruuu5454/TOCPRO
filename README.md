@@ -16,8 +16,12 @@ Line id : @273mguqp
 
 Leave the name of the state as message can change state.
 
+* check route
+
 <img src="https://imgur.com/LRFhKg4.jpg"
 width="300">
+
+* record route
 
 <img src="https://imgur.com/pfIPYrq.jpg"
 width="300">
