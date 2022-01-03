@@ -1,7 +1,6 @@
 ## Introduction
 #### school work
-Three states : user->check->datainfo 
-
+Unable to do the function, only states
 ## Add me to start your journey !
 
 ![Qr code](https://imgur.com/k0RK8S2.jpg)
